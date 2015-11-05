@@ -58,7 +58,7 @@ def main(arg):
     configurationObject =  yaml.load(configurationStream)
 
     #now set detailed billing file
-    BILLINGREPORTZIPFILE = os.path.join(path,'etc','apps','SplunkAppforAWSBilling','tmp',
+    BILLINGREPORTZIPFILE = os.path.join(path,'AppforAWSBilling','tmp',
                                         str(configurationObject['s3']['account_number'])+'_detailed_billing-'+ str(arg.year)+'-'+str(arg.month).zfill(2)+'.zip')
 
     # get a bucket connection

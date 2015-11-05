@@ -17,12 +17,12 @@ import time
 from datetime import datetime,timedelta
 
 #path and file stuff
-path = os.environ["SPLUNK_HOME"]
-appname = 'SplunkAppforAWSBilling'
-BILLINGREPORTZIPDIR = os.path.join(path, 'etc', 'apps', appname, 'tmp')
-BILLINGREPORTCSVDIR = os.path.join(path, 'etc', 'apps', appname, 'csv')
-AWSCONFIGFILE = os.path.join(path, 'etc', 'apps', appname, 'local', 'aws.yaml')
-ERRORLOGFILE = os.path.join(path, 'etc', 'apps', appname, 'log', 'detailed_bill_errors.txt')
+path = ""
+appname = 'AppforAWSBilling'
+BILLINGREPORTZIPDIR = os.path.join(path, appname, 'tmp')
+BILLINGREPORTCSVDIR = os.path.join(path, appname, 'csv')
+AWSCONFIGFILE = os.path.join(path, appname, 'local', 'aws.yaml')
+ERRORLOGFILE = os.path.join(path, appname, 'log', 'detailed_bill_errors.txt')
 
 #time related malarkey for guessing last months billing file name - i mean building
 def datefilename():
